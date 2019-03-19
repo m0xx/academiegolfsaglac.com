@@ -3,6 +3,8 @@ import styled, {css} from 'styled-components';
 
 import Header from './Header';
 import {Header1, Header2, Paragraph} from './Typography'
+import { Flex, Box } from '@rebass/grid'
+import { space } from 'styled-system'
 
 const Layout = styled.div`
 `
@@ -14,6 +16,11 @@ const Content = styled.div`
 
 const Section = styled.div`
     padding: 100px 0;
+    
+    ${props => props.variant === 'primary' && css`
+        background-color: ${props.theme.colors.blue};
+        color: ${props.theme.colors.white};
+    `}
 `
 
 const HeaderImage = styled.div`
@@ -34,32 +41,75 @@ const Price = styled.div`
 `
 
 const PriceCard = ({title, text, price}) => {
-    return <Paper style={{width: 200, height: 200, textAlign: 'center', display: 'inline-block', padding: 30}}>
+    return <Paper style={{textAlign: 'center', display: 'inline-block', padding: 30}}>
         <Header2>{ title }</Header2>
         <Paragraph variant="light">{ text }</Paragraph>
         <Price>{ price }</Price>
     </Paper>
 }
 
+
+const Button = styled.button`
+    border-style: solid;
+    border-width: 3px;
+    border-color: ${props => props.theme.buttons[props.variant].color};
+    text-transform: uppercase;
+    background-color: transparent;
+    color: ${props => props.theme.buttons[props.variant].color}
+    padding: ${props => props.theme.space[2]}
+    margin-top: ${props => props.theme.space[3]}
+    
+
+`
+
+Button.defaultProps = { variant: 'primary' }
 export default function App() {
     return <Layout>
         <Header />
         <Content >
             <HeaderImage  />
             <Section>
-                <Header1>
-                    Cours de golf
-                </Header1>
-                <Paragraph style={{maxWidth: 600}} variant="light">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-                    nec velit metus. Phasellus quis condimentum elit. Vivamus
-                    convallis lacus mi, a varius ligula egestas et.
-                </Paragraph>
-                <div>
-                    <PriceCard title="Privé" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec velit metus." price="299$" />
-                    <PriceCard title="Semi-Privé" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec velit metus." price="299$" />
-                    <PriceCard title="Groupe" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec velit metus." price="299$" />
-                </div>
+                <Box px={3}>
+                    <Header1>
+                        Cours de golf
+                    </Header1>
+                    <Paragraph style={{maxWidth: 600}} variant="light">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+                        nec velit metus. Phasellus quis condimentum elit. Vivamus
+                        convallis lacus mi, a varius ligula egestas et.
+                    </Paragraph>
+                </Box>
+                <Flex>
+                    <Box width={1/3} px={3}>
+                        <PriceCard title="Privé" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec velit metus." price="299$" />
+                    </Box>
+                    <Box width={1/3} px={3}>
+                        <PriceCard title="Semi-Privé" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec velit metus." price="299$" />
+                    </Box>
+                    <Box width={1/3} px={3}>
+                        <PriceCard title="Groupe" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec velit metus." price="299$" />
+                    </Box>
+                </Flex>
+            </Section>
+            <Section variant="primary">
+                <Flex>
+                    <Box width={6/10} px={3}>
+                        <Header1>
+                            Programme Excellence
+                        </Header1>
+                        <Paragraph style={{maxWidth: 600}} variant="light">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+                            nec velit metus. Phasellus quis condimentum elit. Vivamus
+                            convallis lacus mi, a varius ligula egestas et.
+                        </Paragraph>
+                    </Box>
+                    <Box width={4/10} px={3} style={{textAlign: 'center'}}>
+                        <Price>299$</Price>
+                        <Button variant="secondary">
+                            TÉLÉCHARGER FORMULAIRE
+                        </Button>
+                    </Box>
+                </Flex>
             </Section>
         </Content>
     </Layout>
