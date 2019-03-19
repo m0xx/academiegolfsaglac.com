@@ -1,0 +1,27 @@
+{
+  "name": "agsl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "styleguide": "parcel styleguide.html",
+    "build": "parcel build index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@material-ui/core": "^3.9.2",
+    "@material-ui/icons": "^3.0.2",
+    "babel-polyfill": "^6.26.0",
+    "classnames": "^2.2.6",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "styled-components": "^4.1.3",
+    "styled-normalize": "^8.0.6"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.11.0"
+  }
+}
