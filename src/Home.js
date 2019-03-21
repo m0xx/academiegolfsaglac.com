@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Header from './Header';
+import Button from './Button';
 
 const Layout = styled.div`
     display: flex;
@@ -21,13 +22,13 @@ const Hero = styled.div`
     margin-left: 200px;
 `
 
-const Button = styled.div`
-    display: inline-block;
-    padding: 10px;
-    font-weight: bold;
-    color: #FFF;
-    background-color: #000;
-`
+// const Button = styled.div`
+//     display: inline-block;
+//     padding: 10px;
+//     font-weight: bold;
+//     color: #FFF;
+//     background-color: #000;
+// `
 
 
 export default function App() {
@@ -36,7 +37,7 @@ export default function App() {
         <Content >
             <Hero>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                <Button>RÉSERVEZ MAINTENANT</Button>
+                <Button variant="secondary">RÉSERVEZ MAINTENANT</Button>
             </Hero>
         </Content>
     </Layout>

@@ -17,6 +17,7 @@
     "@rebass/grid": "^6.0.0-7",
     "babel-polyfill": "^6.26.0",
     "classnames": "^2.2.6",
+    "hoist-non-react-statics": "^3.3.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "styled-components": "^4.1.3",
