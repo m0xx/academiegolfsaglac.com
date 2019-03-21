@@ -11,6 +11,14 @@ breakpoints.md = breakpoints[1]
 breakpoints.lg = breakpoints[2]
 breakpoints.xl = breakpoints[3]
 
+
+const boxShadows = [
+    `0 0 2px 0 rgba(0,0,0,.08),0 1px 4px 0 rgba(0,0,0,.16)`,
+    `0 0 2px 0 rgba(0,0,0,.08),0 2px 8px 0 rgba(0,0,0,.16)`,
+    `0 0 2px 0 rgba(0,0,0,.08),0 4px 16px 0 rgba(0,0,0,.16)`,
+    `0 0 2px 0 rgba(0,0,0,.08),0 8px 32px 0 rgba(0,0,0,.16)`
+]
+
 // colors
 
 const black = '#000'
@@ -147,7 +155,8 @@ export default {
     breakpoints,
     colors,
     colorStyles,
-    buttons,
+    // buttons,
     textStyles,
-    maxContainerWidth
+    maxContainerWidth,
+    boxShadows
 }
