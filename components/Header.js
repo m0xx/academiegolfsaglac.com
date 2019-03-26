@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import Link from 'next/link'
 
 const Header = styled.div`
     padding-right: 30px;
@@ -64,10 +64,10 @@ export default function App() {
                 <Facebook />
             </Contact>
             <Menu>
-                <MenuItem>SERVICES</MenuItem>
-                <MenuItem>JUNIORS</MenuItem>
-                <MenuItem>GOLF INTÉRIEUR</MenuItem>
-                <MenuItem>À PROPOS</MenuItem>
+                <MenuItem><Link href="/services">SERVICES</Link></MenuItem>
+                <MenuItem><Link href="/juniors">JUNIORS</Link></MenuItem>
+                <MenuItem><Link href="/golf-interieur">GOLF INTÉRIEUR</Link></MenuItem>
+                <MenuItem><Link href="/a-propos">À PROPOS</Link></MenuItem>
             </Menu>
         </Content>
     </Header>
