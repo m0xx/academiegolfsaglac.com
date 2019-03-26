@@ -1,15 +1,15 @@
 import React from 'react';
 import styled, {css, withTheme} from 'styled-components';
 
-import Header from './Header';
-import Flex from './Flex'
-import Box from './Box'
+import Header from './../components/Header';
+import Flex from './../components/Flex'
+import Box from './../components/Box'
 import { space, textAlign } from 'styled-system'
-import Container from './Container';
-import Heading from "./Heading";
-import Text from "./Text";
-import Button from "./Button";
-import Paper from "./Paper";
+import Container from './../components/Container';
+import Heading from "./../components/Heading";
+import Text from "./../components/Text";
+import Button from "./../components/Button";
+import Paper from "./../components/Paper";
 
 const Layout = styled.div`
 `
