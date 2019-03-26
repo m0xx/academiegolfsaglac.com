@@ -1,13 +1,5 @@
-import styled from 'styled-components'
-import {
-    textStyle,
-    fontSize,
-    fontWeight,
-    textAlign,
-    lineHeight,
-    space,
-    color,
-} from 'styled-system'
+import styled from 'styled-components';
+import { textStyle, fontSize, fontWeight, textAlign, lineHeight, space, color } from 'styled-system';
 
 const Text = styled.div`
   margin: 0;
@@ -20,13 +12,12 @@ const Text = styled.div`
   ${lineHeight}
   ${space}
   ${color}
-`
+`;
 
-Text.displayName = 'Text'
+Text.displayName = 'Text';
 
+Text.Span = Text.withComponent('span');
+Text.P = Text.withComponent('p');
+Text.S = Text.withComponent('s');
 
-Text.Span = Text.withComponent('span')
-Text.P = Text.withComponent('p')
-Text.S = Text.withComponent('s')
-
-export default Text
+export default Text;

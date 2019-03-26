@@ -8,19 +8,19 @@ const Layout = styled.div`
     display: flex;
     flex-direction: column;
     height: 100vh;
-`
+`;
 
 const Content = styled.div`
     display: flex;
     align-items: center;
     flex-grow: 1;
     background-color: pink;
-`
+`;
 
 const Hero = styled.div`
     max-width: 300px;
     margin-left: 200px;
-`
+`;
 
 // const Button = styled.div`
 //     display: inline-block;
@@ -30,15 +30,16 @@ const Hero = styled.div`
 //     background-color: #000;
 // `
 
-
 export default function App() {
-    return <Layout>
-        <Header />
-        <Content >
-            <Hero>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                <Button variant="secondary">RÉSERVEZ MAINTENANT</Button>
-            </Hero>
-        </Content>
-    </Layout>
+    return (
+        <Layout>
+            <Header />
+            <Content>
+                <Hero>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    <Button variant="secondary">RÉSERVEZ MAINTENANT</Button>
+                </Hero>
+            </Content>
+        </Layout>
+    );
 }

@@ -5,7 +5,7 @@
     "scripts": {
         "dev": "next",
         "build": "next build",
-        "format": "pretty-quick"
+        "format": "prettier --write \"{components,pages}/**/*.js\""
     },
     "husky": {
         "hooks": {

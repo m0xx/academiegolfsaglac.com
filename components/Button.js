@@ -2,7 +2,9 @@ import styled, { css } from 'styled-components';
 import { width, space } from 'styled-system';
 
 const createVariant = (variant, color, hoverTextColor = 'white') => {
-    return props => props.variant === variant && css`
+    return props =>
+        props.variant === variant &&
+        css`
         box-shadow: ${color} 0px 0px 0px 3px inset
         color: ${props => props.theme.colors[color]};
     
@@ -10,9 +12,8 @@ const createVariant = (variant, color, hoverTextColor = 'white') => {
             background-color: ${props => props.theme.colors[color]};
             color: ${props => props.theme.colors[hoverTextColor]};
         }
-    `
-}
-
+    `;
+};
 
 const Button = styled.button`
   -webkit-font-smoothing: antialiased;
@@ -48,8 +49,6 @@ Button.displayName = 'Button';
 
 Button.defaultProps = {
     variant: 'primary'
-}
-
-
+};
 
 export default Button;

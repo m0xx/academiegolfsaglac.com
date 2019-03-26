@@ -1,4 +1,3 @@
-import hoistStatics from 'hoist-non-react-statics'
+import hoistStatics from 'hoist-non-react-statics';
 
-export const mapProps = map => Component =>
-    hoistStatics(props => <Component {...map(props)} />, Component)
+export const mapProps = map => Component => hoistStatics(props => <Component {...map(props)} />, Component);

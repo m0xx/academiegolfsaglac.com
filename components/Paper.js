@@ -6,11 +6,11 @@ const Paper = styled.div`
     ${space}
     ${textAlign}
     box-shadow: ${props => props.theme.boxShadows[props.elevation]}
-`
+`;
 Paper.defaultProps = {
     elevation: 1
-}
+};
 
-Paper.displayName = 'Paper'
+Paper.displayName = 'Paper';
 
 export default Paper;

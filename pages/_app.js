@@ -2,8 +2,8 @@ import React from 'react';
 import App, { Container } from 'next/app';
 import Head from 'next/head';
 
-import { Normalize } from 'styled-normalize'
-import { ThemeProvider } from 'styled-components'
+import { Normalize } from 'styled-normalize';
+import { ThemeProvider } from 'styled-components';
 import theme from './../components/theme';
 
 class MyApp extends App {
