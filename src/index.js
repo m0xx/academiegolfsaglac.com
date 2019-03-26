@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Home from './Home';
 import Juniors from './Juniors';
+import Services from './Services';
 import { Normalize } from 'styled-normalize'
 import { ThemeProvider } from 'styled-components'
 
@@ -11,7 +12,7 @@ function Root() {
     return <React.Fragment>
         <Normalize />
         <ThemeProvider theme={theme}>
-            <Juniors />
+            <Services />
         </ThemeProvider>
     </React.Fragment>
 }

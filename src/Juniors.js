@@ -35,14 +35,6 @@ const HeaderImage = styled.div`
     background-position: center;
 `
 
-const Paper = styled.div`
-    ${space}
-    ${textAlign}
-    box-shadow: ${props => props.theme.boxShadows[props.elevation]}
-`
-Paper.defaultProps = {
-    elevation: 1
-}
 
 const Price = styled.div`
     font-size: 4rem;
