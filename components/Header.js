@@ -3,11 +3,7 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import { withRouter } from 'next/router';
 import { SocialIcon } from 'react-social-icons';
-
-const Container = styled.div`
-    padding-right: 30px;
-    display: flex;
-`;
+import Container from './Container';
 
 const Content = styled.div`
     display: flex;
@@ -27,7 +23,7 @@ const Logo = styled.div`
 const MenuItem = styled.li`
     display: inline-block;
     padding: 0;
-    font-size: ${props => props.theme.fontSizes[3]}px;
+    font-size: ${props => props.theme.fontSizes[4]}px;
     margin-left: ${props => props.theme.space[4]}px;
 `;
 
@@ -35,6 +31,7 @@ const Menu = styled.ul`
     display: inline-block;
     margin: 0;
     padding: 0;
+    padding-bottom: ${props => props.theme.space[2]}px;
 `;
 
 const Contact = styled.div`
@@ -47,7 +44,7 @@ const Contact = styled.div`
 const Phone = styled.span`
     display: inline-block;
     color: #000;
-    font-size: ${props => props.theme.fontSizes[2]}px;
+    font-size: ${props => props.theme.fontSizes[3]}px;
     margin-right: ${props => props.theme.space[3]}px;
 `;
 
@@ -55,48 +52,57 @@ const StyledLink = styled.a`
     &,
     &:visited {
         text-decoration: none;
-        opacity: 0.8;
-        color: ${props => (props.active ? props.theme.colors.blue : '#333')};
+        // opacity: 0.7;
+        // border-bottom: ${props => (props.active ? `3px solid ${props.theme.colors.blue}` : 'none')}
+        font-weight: ${props => (props.active ? `bold` : 'normal')}
+        // color: ${props => (props.active ? props.theme.colors.blue : '#333')};
+        color: #333;
         transition: opacity 0.2s ease 0s, transform 0.2s ease 0s;
     }
 
     &:hover {
         opacity: 1;
+        border-bottom: 2px solid #333;
     }
 `;
 
 const links = [
     { href: '/services', label: 'Services' },
     { href: '/juniors', label: 'Juniors' },
-    { href: '/golf-interieur', label: 'Golf Intérieur' },
-    { href: '/a-propos', label: 'À Propos' }
+    { href: '/golf-interieur', label: 'Golf intérieur' },
+    { href: '/a-propos', label: 'À propos' }
 ];
 
 function Header({ router }) {
     return (
         <Container>
-            <Logo />
-            <Content>
-                <Contact>
-                    <Phone>(418) 812-0532</Phone>
-                    <SocialIcon style={{ width: 32, height: 32 }} url="https://www.facebook.com/academiegolfsaglac/" />
-                </Contact>
-                <Menu>
-                    {links.map(({ href, label }) => {
-                        const active = router.pathname === href;
+            <div style={{ display: 'flex' }}>
+                <Logo />
+                <Content>
+                    <Contact>
+                        <Phone>(418) 812-0532</Phone>
+                        <SocialIcon
+                            style={{ width: 32, height: 32 }}
+                            url="https://www.facebook.com/academiegolfsaglac/"
+                        />
+                    </Contact>
+                    <Menu>
+                        {links.map(({ href, label }) => {
+                            const active = router.pathname === href;
 
-                        return (
-                            <MenuItem key={href}>
-                                <Link>
-                                    <StyledLink href={href} active={active}>
-                                        {label}
-                                    </StyledLink>
-                                </Link>
-                            </MenuItem>
-                        );
-                    })}
-                </Menu>
-            </Content>
+                            return (
+                                <MenuItem key={href}>
+                                    <Link>
+                                        <StyledLink href={href} active={active}>
+                                            {label}
+                                        </StyledLink>
+                                    </Link>
+                                </MenuItem>
+                            );
+                        })}
+                    </Menu>
+                </Content>
+            </div>
         </Container>
     );
 }

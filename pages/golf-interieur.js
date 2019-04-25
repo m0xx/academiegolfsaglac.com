@@ -9,16 +9,10 @@ import Text from '../components/Text';
 import Flex from '../components/Flex';
 import Container from '../components/Container';
 import PriceCard from '../components/PriceCard';
-import Card from '../components/Card';
-const Layout = styled.div`
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-`;
 
 export default function GolfInterieur() {
     return (
-        <Layout>
+        <div>
             <Header />
             <HeaderImage />
             <Box py={5}>
@@ -50,6 +44,6 @@ export default function GolfInterieur() {
                     </Flex>
                 </Container>
             </Box>
-        </Layout>
+        </div>
     );
 }

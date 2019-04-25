@@ -12,7 +12,7 @@ class MyApp extends App {
         return (
             <Container>
                 <Head>
-                    <title>Intelcom Portal</title>
+                    <title>Académie de golf Saguenay-Lac-St-Jean</title>
                 </Head>
                 <Normalize />
                 <ThemeProvider theme={theme}>
