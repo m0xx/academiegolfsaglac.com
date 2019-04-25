@@ -9,4 +9,4 @@ steps:
       entrypoint: npm
       args: ['run', 'export']
     - name: gcr.io/cloud-builders/gsutil
-      args: ['cp', '-Z', '-r', '-c', './out/**', 'gs://agsl']
+      args: ['cp', '-Z', '-r', '-c', './out/', 'gs://agsl']
