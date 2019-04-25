@@ -25,11 +25,11 @@ const Button = styled.button`
   font-weight: 600;
   line-height: 1.5;
   cursor: pointer;
-  font-size: ${props => props.theme.fontSizes[3]};
-  padding-top: ${props => props.theme.space[2]};
-  padding-right: ${props => props.theme.space[4]};
-  padding-bottom: ${props => props.theme.space[2]};
-  padding-left: ${props => props.theme.space[4]};
+  font-size: ${props => props.theme.fontSizes[3]}px;
+  padding-top: ${props => props.theme.space[2]}px;
+  padding-right: ${props => props.theme.space[4]}px;
+  padding-bottom: ${props => props.theme.space[2]}px;
+  padding-left: ${props => props.theme.space[4]}px;
   text-transform: uppercase;
   border: none;
   background-color: transparent;
