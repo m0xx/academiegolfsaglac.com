@@ -19,5 +19,10 @@ Text.displayName = 'Text';
 Text.Span = Text.withComponent('span');
 Text.P = Text.withComponent('p');
 Text.S = Text.withComponent('s');
+Text.UL = styled(Text)`
+    li {
+        margin-bottom: ${props => props.theme.space[1]}px;
+    }
+`;
 
 export default Text;
