@@ -9,13 +9,14 @@ import Text from '../components/Text';
 import Flex from '../components/Flex';
 import Container from '../components/Container';
 import PriceCard from '../components/PriceCard';
+import Footer from '../components/Footer';
 
 export default function GolfInterieur() {
     return (
         <div>
             <Header />
             <HeaderImage />
-            <Box py={5}>
+            <Box pt={5} pb={3}>
                 <Container py={5}>
                     <Box px={3}>
                         <Heading.H2 textStyle="display7" mb={3}>
@@ -44,6 +45,7 @@ export default function GolfInterieur() {
                     </Flex>
                 </Container>
             </Box>
+            <Footer />
         </div>
     );
 }

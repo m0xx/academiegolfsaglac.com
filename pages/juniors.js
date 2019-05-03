@@ -11,6 +11,7 @@ import Text from './../components/Text';
 import Button from './../components/Button';
 import Paper from './../components/Paper';
 import HeaderImage from '../components/HeaderImage';
+import Footer from '../components/Footer';
 
 const Layout = styled.div``;
 
@@ -163,6 +164,7 @@ function App({ theme }) {
                     </Container>
                 </Section>
             </Content>
+            <Footer />
         </Layout>
     );
 }

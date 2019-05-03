@@ -1,13 +1,14 @@
 import styled, { css } from 'styled-components';
 import { width, space } from 'styled-system';
 
-const createVariant = (variant, color, hoverTextColor = 'white') => {
+const createVariant = (variant, color, hoverTextColor = 'white', fill = false) => {
     return props =>
         props.variant === variant &&
         css`
         box-shadow: ${color} 0px 0px 0px 3px inset
-        color: ${props => props.theme.colors[color]};
-    
+        color: ${props => (fill ? hoverTextColor : props.theme.colors[color])};
+        background-color: ${props => (fill ? props.theme.colors[color] : 'transparent')};
+            
         &:hover {
             background-color: ${props => props.theme.colors[color]};
             color: ${props => props.theme.colors[hoverTextColor]};
@@ -38,6 +39,7 @@ const Button = styled.button`
   
   ${createVariant('primary', 'black', 'white')}
   ${createVariant('secondary', 'white', 'black')}
+  ${createVariant('primary-fill', 'black', 'white', true)}
 
   ${width} 
   ${space}

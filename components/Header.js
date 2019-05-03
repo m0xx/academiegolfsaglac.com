@@ -14,16 +14,15 @@ const Content = styled.div`
     padding-bottom: ${props => props.theme.space[2]}px;
 `;
 
-const Logo = styled.div`
-    width: 120px;
+const Logo = styled.img`
+    width: 144px;
     height: 120px;
-    background-color: #000;
 `;
 
 const MenuItem = styled.li`
     display: inline-block;
     padding: 0;
-    font-size: ${props => props.theme.fontSizes[4]}px;
+    font-size: ${props => props.theme.fontSizes[3]}px;
     margin-left: ${props => props.theme.space[4]}px;
 `;
 
@@ -52,7 +51,8 @@ const StyledLink = styled.a`
     &,
     &:visited {
         text-decoration: none;
-        font-weight: ${props => (props.active ? `bold` : 'normal')}
+        font-weight: ${props => (props.active ? `bold` : 'bold')};
+        border-bottom: ${props => (props.active ? '2px solid #333' : 'none')}
         color: #333;
         transition: opacity 0.2s ease 0s, transform 0.2s ease 0s;
     }
@@ -65,6 +65,7 @@ const StyledLink = styled.a`
 `;
 
 const links = [
+    { href: '/', label: 'Accueil' },
     { href: '/services', label: 'Services' },
     { href: '/juniors', label: 'Juniors' },
     { href: '/golf-interieur', label: 'Golf intérieur' },
@@ -75,7 +76,7 @@ function Header({ router }) {
     return (
         <Container>
             <div style={{ display: 'flex' }}>
-                <Logo />
+                <Logo src="/static/images/agsl.png" />
                 <Content>
                     <Contact>
                         <Phone>(418) 812-0532</Phone>

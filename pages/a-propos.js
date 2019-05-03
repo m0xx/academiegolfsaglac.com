@@ -10,6 +10,7 @@ import Heading from '../components/Heading';
 import Text from '../components/Text';
 import Card from '../components/Card';
 import HeaderImage from '../components/HeaderImage';
+import Footer from '../components/Footer';
 
 export default function APropos() {
     return (
@@ -94,6 +95,7 @@ export default function APropos() {
                     </Box>
                 </Flex>
             </Container>
+            <Footer />
         </div>
     );
 }

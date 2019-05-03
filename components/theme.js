@@ -27,22 +27,6 @@ const colors = {
     gray
 };
 
-const buttons = {
-    primary: {
-        color: colors.black,
-        '&:hover': {
-            color: colors.white
-        }
-    },
-    secondary: {
-        color: colors.white,
-        '&:hover': {
-            color: colors.black
-        },
-        hoverColor: colors.blue
-    }
-};
-
 const letterSpacings = {
     normal: 'normal',
     caps: '0.025em'
@@ -147,7 +131,6 @@ export default {
     breakpoints,
     colors,
     colorStyles,
-    // buttons,
     textStyles,
     maxContainerWidth,
     boxShadows
