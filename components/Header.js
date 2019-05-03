@@ -52,10 +52,7 @@ const StyledLink = styled.a`
     &,
     &:visited {
         text-decoration: none;
-        // opacity: 0.7;
-        // border-bottom: ${props => (props.active ? `3px solid ${props.theme.colors.blue}` : 'none')}
         font-weight: ${props => (props.active ? `bold` : 'normal')}
-        // color: ${props => (props.active ? props.theme.colors.blue : '#333')};
         color: #333;
         transition: opacity 0.2s ease 0s, transform 0.2s ease 0s;
     }
@@ -63,6 +60,7 @@ const StyledLink = styled.a`
     &:hover {
         opacity: 1;
         border-bottom: 2px solid #333;
+        cursor: pointer;
     }
 `;
 
@@ -92,10 +90,8 @@ function Header({ router }) {
 
                             return (
                                 <MenuItem key={href}>
-                                    <Link>
-                                        <StyledLink href={href} active={active}>
-                                            {label}
-                                        </StyledLink>
+                                    <Link href={href}>
+                                        <StyledLink active={active}>{label}</StyledLink>
                                     </Link>
                                 </MenuItem>
                             );

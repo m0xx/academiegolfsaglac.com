@@ -33,7 +33,9 @@ const Hero = styled.div`
 export default function App() {
     return (
         <Layout>
-            <Header />
+            <div>
+                <Header />
+            </div>
             <Content>
                 <Hero>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>

@@ -149,6 +149,23 @@ function App({ theme }) {
                                     />
                                 </Box>
                             </Flex>
+                            <Flex pt={5}>
+                                <Box width={1 / 2} px={3}>
+                                    <div
+                                        style={{ height: 400, background: "url('https://via.placeholder.com/150')" }}
+                                    />
+                                </Box>
+                                <Box width={1 / 2} px={3}>
+                                    <Heading.H2 textStyle="display7" mb={3}>
+                                        Voyage organisé
+                                    </Heading.H2>
+                                    <Text.P textStyle="body2" mb={3}>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec velit
+                                        metus. Phasellus quis condimentum elit. Vivamus convallis lacus mi, a varius
+                                        ligula egestas et.
+                                    </Text.P>
+                                </Box>
+                            </Flex>
                         </Container>
                     </Box>
                 </Section>
